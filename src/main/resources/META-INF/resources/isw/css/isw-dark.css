@@ -1,0 +1,10 @@
+body {
+	--isw-color-dark: var(--isw-dark-dark);
+	--isw-color-light: var(--isw-dark-light);
+	--isw-color-normal: var(--isw-dark-normal);
+}
+
+body::after {
+	background-image:
+		url("https://inaki-sw.xyz/multimedia/background/isw-dark-dark.png");
+}

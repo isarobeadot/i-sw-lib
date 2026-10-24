@@ -1,0 +1,10 @@
+body {
+	--isw-color-dark: var(--isw-turquoise-dark);
+	--isw-color-light: var(--isw-turquoise-light);
+	--isw-color-normal: var(--isw-turquoise-normal);
+}
+
+body::after {
+	background-image:
+		url("https://inaki-sw.xyz/multimedia/background/isw-dark-turquoise.png");
+}

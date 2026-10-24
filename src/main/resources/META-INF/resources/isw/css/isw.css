@@ -1,0 +1,162 @@
+/* Global configuration */
+
+body {
+	/* Global variables */
+	--isw-blue-normal: #99F;
+	--isw-blue-dark: #00A;
+	--isw-blue-light: #CCF;
+	--isw-dark-normal: #AAA;
+	--isw-dark-dark: #555;
+	--isw-dark-light: #BBB;
+	--isw-gold-normal: #FB0;
+	--isw-gold-dark: #A70;
+	--isw-gold-light: #FE9;
+	--isw-green-normal: #5F5;
+	--isw-green-dark: #080;
+	--isw-green-light: #BFB;
+	--isw-lime-normal: #DF0;
+	--isw-lime-dark: #790;
+	--isw-lime-light: #EFA;
+	--isw-orange-normal: #F93;
+	--isw-orange-dark: #C50;
+	--isw-orange-light: #FC9;
+	--isw-pink-normal: #F7C;
+	--isw-pink-dark: #F07;
+	--isw-pink-light: #FCE;
+	--isw-purple-normal: #B8F;
+	--isw-purple-dark: #60B;
+	--isw-purple-light: #DBF;
+	--isw-red-normal: #F65;
+	--isw-red-dark: #A00;
+	--isw-red-light: #FAA;
+	--isw-turquoise-normal: #4ED;
+	--isw-turquoise-dark: #0AA;
+	--isw-turquoise-light: #AEE;
+	--isw-color-base-1: #EEE;
+	--isw-color-base-2: #CCC;
+	--isw-color-base-3: #BBB;
+	--isw-color-base-4: #555;
+	--isw-color-base-5: #333;
+	/* Other CSS */
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-size: 2000px;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+	z-index: -100;
+}
+
+::-moz-selection { /* Code for Firefox */
+	background: var(--isw-color-light);
+	color: var(--isw-color-base-5);
+}
+
+::selection {
+	background: var(--isw-color-light);
+	color: var(--isw-color-base-5);
+}
+
+/* Override Bootstrap */
+
+.navbar {
+	padding-left: 10px;
+}
+
+table td, .table th {
+	padding: .75rem;
+}
+
+.table .thead-dark th {
+	background-color: var(--isw-color-base-5);
+	color: white !important;
+}
+
+.table .thead-dark th .pagination {
+	justify-content: center;
+}
+
+.bg-light {
+	background-color: var(--isw-color-base-1) !important;
+}
+
+.bg-dark {
+	background-color: var(--isw-color-base-5) !important;
+}
+
+.breadcrumb {
+	background-color: var(--isw-color-base-1);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+	padding: .75rem 1rem;
+}
+
+.breadcrumb-item>a {
+	color: var(--isw-color-dark);
+}
+
+.breadcrumb-item.active {
+	color: var(--isw-color-base-4)
+}
+
+.btn {
+	border-radius: .6rem;
+	box-shadow: 0px 0px 6px var(--isw-color-base-4);
+	margin: 2px;
+	transition: .6s;
+}
+
+.btn-primary {
+	background-color: var(--isw-color-dark);
+	border-color: var(--isw-color-dark);
+}
+
+.btn-primary:active {
+	background-color: var(--isw-color-normal);
+	border-color: var(--isw-color-normal);
+	color: var(--isw-color-base-5);
+}
+
+.btn-primary:focus {
+	background-color: var(--isw-color-normal);
+	border-color: var(--isw-color-normal);
+	color: var(--isw-color-base-5);
+}
+
+.btn-primary:hover {
+	background-color: var(--isw-color-normal);
+	border-color: var(--isw-color-normal);
+	color: var(--isw-color-base-5);
+}
+
+.form-control {
+	border-color: var(--isw-color-dark);
+	border-radius: .6rem;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	transition: border-color .6s ease-in-out, box-shadow .6s ease-in-out;
+}
+
+.form-control:focus {
+	box-shadow: 0px 0px 4px var(--isw-color-dark);
+	border-color: var(--isw-color-dark);
+}
+
+/* Custom style */
+
+.isw-heading {
+	color: var(--isw-color-dark);
+}
+
+.isw-detail {
+	background-color: var(--isw-color-base-1) !important;
+	border-radius: .8rem !important;
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+	margin-bottom: 1.5rem !important;
+	padding: 3rem !important;
+}
