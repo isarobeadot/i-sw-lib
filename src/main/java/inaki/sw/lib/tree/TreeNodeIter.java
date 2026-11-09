@@ -1,6 +1,7 @@
 package inaki.sw.lib.tree;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class TreeNodeIter<T> implements Iterator<TreeNode<T>> {
 
@@ -23,6 +24,9 @@ public class TreeNodeIter<T> implements Iterator<TreeNode<T>> {
 
 	@Override
 	public boolean hasNext() {
+		if (this.next != null) {
+			return true;
+		}
 
 		if (this.doNext == ProcessStages.ProcessParent) {
 			this.next = this.treeNode;
@@ -61,7 +65,12 @@ public class TreeNodeIter<T> implements Iterator<TreeNode<T>> {
 
 	@Override
 	public TreeNode<T> next() {
-		return this.next;
+		if (!this.hasNext()) {
+			throw new NoSuchElementException();
+		}
+		TreeNode<T> result = this.next;
+		this.next = null;
+		return result;
 	}
 
 	@Override
