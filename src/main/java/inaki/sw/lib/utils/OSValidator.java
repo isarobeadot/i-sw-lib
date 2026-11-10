@@ -5,6 +5,7 @@ import java.util.Locale;
 /**
  * 
  * @author inaki
+ * @since 1.0
  *
  */
 public class OSValidator {

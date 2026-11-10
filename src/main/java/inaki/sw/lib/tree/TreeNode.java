@@ -6,6 +6,11 @@ import java.util.List;
 
 import lombok.Getter;
 
+/**
+ * @author inaki
+ * @since 1.0
+ * @param <T>
+ */
 @Getter
 public class TreeNode<T> implements Iterable<TreeNode<T>> {
 
@@ -39,23 +44,26 @@ public class TreeNode<T> implements Iterable<TreeNode<T>> {
 	}
 
 	public int getLevel() {
-		if (this.isRoot())
+		if (this.isRoot()) {
 			return 0;
-		else
+		} else {
 			return parent.getLevel() + 1;
+		}
 	}
 
 	private void registerChildForSearch(TreeNode<T> node) {
 		elementsIndex.add(node);
-		if (parent != null)
+		if (parent != null) {
 			parent.registerChildForSearch(node);
+		}
 	}
 
 	public TreeNode<T> findTreeNode(Comparable<T> cmp) {
 		for (TreeNode<T> element : this.elementsIndex) {
 			T elData = element.data;
-			if (cmp.compareTo(elData) == 0)
+			if (cmp.compareTo(elData) == 0) {
 				return element;
+			}
 		}
 
 		return null;

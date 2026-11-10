@@ -15,6 +15,7 @@ import javax.net.ssl.HttpsURLConnection;
 /**
  * 
  * @author inaki
+ * @since 1.0
  *
  */
 public class URLConnectionReader {

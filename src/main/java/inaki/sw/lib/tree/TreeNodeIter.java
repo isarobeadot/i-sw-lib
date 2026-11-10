@@ -3,6 +3,11 @@ package inaki.sw.lib.tree;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * @author inaki
+ * @since 1.0
+ * @param <T>
+ */
 public class TreeNodeIter<T> implements Iterator<TreeNode<T>> {
 
 	enum ProcessStages {
@@ -47,13 +52,12 @@ public class TreeNodeIter<T> implements Iterator<TreeNode<T>> {
 				return false;
 			}
 		}
-		
+
 		if (this.doNext == ProcessStages.ProcessChildSubNode) {
 			if (childrenSubNodeIter.hasNext()) {
 				this.next = childrenSubNodeIter.next();
 				return true;
-			}
-			else {
+			} else {
 				this.next = null;
 				this.doNext = ProcessStages.ProcessChildCurNode;
 				return hasNext();

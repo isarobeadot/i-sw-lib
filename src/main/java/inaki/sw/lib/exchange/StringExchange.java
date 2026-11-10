@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import inaki.sw.lib.dto.StringDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,10 +15,11 @@ import lombok.ToString;
 import lombok.With;
 
 /**
- * 
  * @author inaki
- *
+ * @since 1.0
+ * @deprecated use {@link StringDTO}
  */
+@Deprecated
 @AllArgsConstructor
 @Getter
 @NoArgsConstructor
@@ -30,6 +32,7 @@ public class StringExchange extends Exchange {
 
 	private String value;
 
+	@Deprecated
 	public static StringExchange jsonStringToExchange(String json) {
 		ObjectMapper mapper = new ObjectMapper();
 		StringExchange value = new StringExchange();

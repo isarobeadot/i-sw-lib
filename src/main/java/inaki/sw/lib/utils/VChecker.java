@@ -15,6 +15,7 @@ import inaki.sw.lib.utils.connector.URLConnectionReader;
 /**
  * 
  * @author inaki
+ * @since 1.0
  *
  */
 public class VChecker implements Runnable {
